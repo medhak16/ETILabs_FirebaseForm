@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "204606716897",
+    "firebase_url": "https://feedback-form-fd87d.firebaseio.com",
+    "project_id": "feedback-form-fd87d",
+    "storage_bucket": "feedback-form-fd87d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204606716897:android:557b769acf19898658f0a0",
+        "android_client_info": {
+          "package_name": "com.smartherd.firebase_form"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204606716897-at9saga2qvq4hl13b5q5e6k28kknfs0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVRbXfsLXHoT7tSDeWWimzWmaOb4m6Yv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204606716897-at9saga2qvq4hl13b5q5e6k28kknfs0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
