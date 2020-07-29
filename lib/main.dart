@@ -32,6 +32,7 @@ class _TestFormState extends State<TestForm> {
   final nameController = TextEditingController();
   final phoneController = TextEditingController();
   final emailController = TextEditingController();
+  final descriptionController = TextEditingController();
   int _radioValue1 = -1;
   int _radioValue2 = -1;
   int _radioValue3 = -1;
@@ -619,6 +620,21 @@ class _TestFormState extends State<TestForm> {
               )
             ],
           ),
+          SizedBox(height: 15.0,),
+          Text('8. What other improvements would you recommend in this workshop?',
+              style: new TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 18.0,
+              ),
+          ),
+          TextField(
+            maxLines: 10,
+            controller: descriptionController ,
+            decoration: InputDecoration(
+            hintText: "Enter a message",
+            //fillColor: Colors.grey[300],
+            filled: true,
+            )
+          ),
           RaisedButton(
             child: Text('Submit'),
             color: Colors.lightBlueAccent,
@@ -635,10 +651,12 @@ class _TestFormState extends State<TestForm> {
                   'ques5':model.ques5,
                   'ques6':model.ques6,
                   'ques7':model.ques7,
+                  'ques8':descriptionController.text,
                 });
                 nameController.text = '';
                 phoneController.text = '';
                 emailController.text = '';
+                descriptionController.text='';
                 _handleRadioValueChanged1(-1);
                 _handleRadioValueChanged2(-1);
                 _handleRadioValueChanged3(-1);
@@ -647,10 +665,29 @@ class _TestFormState extends State<TestForm> {
                 _handleRadioValueChanged6(-1);
                 _handleRadioValueChanged7(-1);
               }
+              showAlertDialog(context);
             },
           )
         ],
       ),
     );
   }
+
+  void showAlertDialog(BuildContext context) {
+
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Text("Thankyou for the Feedback!"),
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
+
+
 }
