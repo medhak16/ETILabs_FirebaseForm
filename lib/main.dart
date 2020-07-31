@@ -9,7 +9,9 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text('Feedback Form'),
@@ -248,7 +250,7 @@ class _TestFormState extends State<TestForm> {
           SizedBox(height: 15.0),
           Column(
             children: <Widget>[
-              Text('1. This workshop lived up to my expectations:',
+              Text('1. This workshop/training lived up to your expectations:',
                 style: new TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18.0,
@@ -301,7 +303,7 @@ class _TestFormState extends State<TestForm> {
                 ],
               ),
               SizedBox(height: 15.0,),
-              Text('2. The content is relevant to my field:',
+              Text('2. The content used is relevant to your field of work:',
                 style: new TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18.0,
